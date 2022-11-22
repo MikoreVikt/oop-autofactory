@@ -1,0 +1,232 @@
+:root {
+  --grey: rgba(0, 0, 0, 0.5);
+  --blue: rgba(0, 0, 255, 0.5);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.CreatorForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 15px;
+  border-bottom: 1px solid black;
+}
+
+.CreatorForm form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+}
+
+.CreatorForm form label {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  width: calc((100% - 40px) / 3);
+}
+
+.CreatorForm input,
+.CreatorForm select {
+  margin-top: 5px;
+  padding: 0 5px;
+  height: 30px;
+  width: 100%;
+  border: 1px solid black;
+  outline: none;
+}
+
+.CreatorForm input:focus {
+  border: 2px solid green;
+  outline: green;
+}
+
+.CreatorForm input[type="submit"] {
+  height: 71px;
+  width: 100%;
+}
+
+.OnSale {
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carList {
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.carItem {
+  width: 25%;
+  min-height: 250px;
+  margin: 5px 25px;
+  border: 1px solid black;
+}
+
+.carItem .carImage {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.carItem .carDesc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.carItem .carDesc span:first-child {
+  font-weight: bold;
+}
+
+.no-orders {
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* +==================================================================== */
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: rgb(255, 251, 0)
+  }
+
+  50% {
+    transform: rotate(180deg);
+    border-top-color: rgb(0, 47, 255);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    border-top-color: rgb(255, 251, 0);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: rgb(255, 251, 0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+    border-top-color: rgb(0, 47, 255);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    border-top-color: rgb(255, 251, 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9f9f9;
+  padding-bottom: 100px;
+}
+
+.loader {
+  position: relative;
+  margin: 75px auto;
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+}
+
+.loader div {
+  height: 100%;
+}
+
+/* loader 4 */
+.loader4,
+.loader4 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+  animation: rotate linear 3.5s infinite;
+  border-radius: 50%;
+  padding: 4px;
+  -webkit-animation: rotate2 4s infinite linear;
+  animation: rotate2 4s infinite linear;
+}
+
+div:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.loader,
+.loader * {
+  will-change: transform;
+}

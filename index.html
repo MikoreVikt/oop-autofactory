@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="CreatorForm">
+            <h1>Order Your Car Now !</h1>
+            <form action="" class="orderForm">
+                <label>
+                    <p>Brand</p>
+                    <input required name='brandInput' type="text" placeholder="Enter brand of your car">
+                </label>
+                <label>
+                    <p>Model</p>
+                    <input required name='modelInput' type="text" placeholder="Enter model of your car">
+                </label>
+                <label>
+                    <p>Gearbox Type</p>
+                    <select name="gearboxTypeInput">
+                        <option value="Automatic" selected>Automatic</option>
+                        <option value="Manual">Manual</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Engine Type</p>
+                    <select name="engineTypeInput">
+                        <option value="V10 5.0" selected>V10 5.0</option>
+                        <option value="V8 4.8">V8 4.8</option>
+                        <option value="R6 3.0">R6 3.0</option>
+                        <option value="R4 2.0">R4 2.0</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Fuel Type</p>
+                    <select name="fuelTypeInput">
+                        <option value="Diesel" selected>Diesel</option>
+                        <option value="Benzin">Benzin</option>
+                        <option value="Electro">Electro</option>
+                        <option value="Gas">Gas</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Color</p>
+                    <select name="colorInput">
+                        <option value="Red" selected>Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Black">Black</option>
+                        <option value="Orange">Orange</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Region Of Sale</p>
+                    <input required name='regionOfSaleInput' type="text"
+                        placeholder="Enter region where you sale your car">
+                </label>
+                <label>
+                    <p>Type of car</p>
+                    <select name="carTypeInput">
+                        <option value="Sedan" selected>Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="TIR">TIR</option>
+                        <option value="Van">Van</option>
+                        <option value="Coupe">Coupe</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Price</p>
+                    <input required name='priceInput' type="text" placeholder="Enter price of your car">
+                </label>
+                <input type="submit">
+                <input type="button" value="Знищити замовлення">
+            </form>
+        </section>
+        <section class="OnSale">
+            <h2 class="carsOnSaleTitle">Cars on Sale</h2>
+            <ul class="carList">
+            </ul>
+        </section>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
